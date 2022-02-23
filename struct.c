@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
-#include <stdlib.h>
+#include <string.h>
 
 typedef struct {
     string name;
@@ -45,9 +45,30 @@ int main(void) {
             printf("\t -> %s\n",canditate[i].courses[j]);
         }
     }
-    
+
     query = get_string("Enter a name to search: ");
-    
-    
-    
+
+    for(i=0; i<2; i++)
+    {
+        if(strcmp(query, canditate[i].name)==0)
+        {
+            printf("%i ", i+1);
+            printf("\t Name: %s\n", canditate[i].name);
+            printf("\t ID: %i\n", canditate[i].id);
+            printf("\t Mobile: %li\n", canditate[i].mobile);
+            printf("\t E-mail: %s\n", canditate[i].email);
+
+            printf("\t Courses: \n");
+            for(j=0;j<2;j++)
+            {
+                printf("\t -> %s\n",canditate[i].courses[j]);
+            }
+            return 0;
+        }
+    }
+    printf("No results found for %s!\n", query);
+
+
+
+
 }
