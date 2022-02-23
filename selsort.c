@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    int num[5], i, selected, smallest_indx, index;
+    int num[5], i, smallest_indx;
     printf("Enter elements of array:\n");
     for(i=0; i < 5; i++)
     {   
