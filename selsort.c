@@ -7,7 +7,8 @@ int main(void)
     int num[5], i, selected, smallest_indx, index;
     printf("Enter elements of array:\n");
     for(i=0; i < 5; i++)
-    {   printf(" >>> ");
+    {   
+        printf(" >>> ");
         scanf("%i", &num[i]);
     }
     printf("unsorted array: |");
