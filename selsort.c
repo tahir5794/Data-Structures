@@ -22,17 +22,9 @@ int main(void)
         smallest_indx = i;
         for (int j = i + 1; j < 5; j++)
         {
-            if (num[i] < num[j])
-            {
-                continue;
-            }
-            else if (num[i] > num[j] && num[j] < num[smallest_indx])
+            if (num[i] > num[j] && num[j] < num[smallest_indx])
             {
                 smallest_indx = j;
-            }
-            else
-            {
-                continue;
             }
         }
 
