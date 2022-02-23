@@ -1,38 +1,34 @@
 #include <stdio.h>
 #include <conio.h>
-#include <stdlib.h>
 
 
 int main(void)
 {
-    int num[5], i, selected, smallest, index;
-    num[0] = 12;
-    num[1] = 15;
-    num[2] = 5;
-    num[3] = 0;
-    num[4] = 1;
-
+    int num[5], i, selected, smallest_indx, index;
+    printf("Enter elements of array:\n");
+    for(i=0; i < 5; i++)
+    {   printf(" >>> ");
+        scanf("%i", &num[i]);
+    }
     printf("unsorted array: |");
     for(i=0; i<5; i++)
     {
-        printf("  %i |", num[i]);
+        printf(" %i |", num[i]);
     }
 
     for (i = 0; i < 5; i++)
     {
-        selected = num[i];
-        smallest = selected;
-        index = i;
+        
+        smallest_indx = i;
         for (int j = i + 1; j < 5; j++)
         {
-            if (selected < num[j])
+            if (num[i] < num[j])
             {
                 continue;
             }
-            else if (selected > num[j] && num[j] < smallest)
+            else if (num[i] > num[j] && num[j] < num[smallest_indx])
             {
-                smallest = num[j];
-                index = j;
+                smallest_indx = j;
             }
             else
             {
@@ -41,8 +37,8 @@ int main(void)
         }
 
         int temp = num[i];
-        num[i] = smallest;
-        num[index] = temp;
+        num[i] = num[smallest_indx];
+        num[smallest_indx] = temp;
     }
 
     printf("\nSorted array: |");
