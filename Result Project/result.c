@@ -141,19 +141,19 @@ void search(subject subjects[], int n)
     printf("\n=> Total: %i out of %i", t_obtained, total);
     printf("\n=> Total Percentage: %.2f %%", total_percent);
 
-    if(total_percent > 90)
+    if(total_percent >= 90)
     {
         printf("\n=> Remarks: Excellent! Keep it up.");
     }
-    else if (total_percent < 90 && total_percent > 75)
+    else if (total_percent < 90 && total_percent >= 75)
     {
         printf("\n=> Remarks: Very Good! You can do more better.");
     }
-    else if (total_percent < 75 && total_percent > 60)
+    else if (total_percent < 75 && total_percent >= 60)
     {
         printf("\n=> Remarks: Good! But needs to improve.");
     }
-    else if (total_percent < 60 && total_percent > 40)
+    else if (total_percent < 60 && total_percent >= 40)
     {
         printf("\n=> Remarks: Poor! Needs to work hard. ");
     }
